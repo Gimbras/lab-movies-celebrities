@@ -1,0 +1,16 @@
+<h2> Celebrity </h2>
+<form method='POST' action='/movies/new-movie'>
+  <div class='mb-3'>
+    <label class='form-label'> Name </label>
+    <input class='form-control' type='text' name='name' />
+    <br />
+    {{#each movies}}
+      <select name='movies' multiple>
+        <option value={{this._id}}>{{this.name}}</option>
+      </select>
+      <br />
+    {{/each}}
+    <input type='submit' value='Submit' />
+    <button class='btn btn-light' type='submit'>SUBMIT</button>
+  </div>
+</form>
